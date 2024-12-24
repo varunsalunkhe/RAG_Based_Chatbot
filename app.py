@@ -25,7 +25,7 @@ if uploaded_file is not None:
     st.write("Embeddings generated for the documents.")
 
     # Step 4: Save the vectorized documents to Weaviate
-    vector_db = save_to_vectordb(documents, embeddings, client)
+    vector_db = save_to_vectordb(documents, embeddings)
     st.success("Documents are vectorized and saved to CromaDB.")
     
     # Step 5: Create the HuggingFace model
@@ -47,7 +47,7 @@ if uploaded_file is not None:
     prompt = ChatPromptTemplate.from_template(template)
     
    # Defining a QnA chain
-    QnA = RetrievalQA.from_chain_type(llm = llm,
+    QnA = RetrievalQA.from_chain_type(llm = model,
                                  chain_type = 'stuff',
                                  retriever = retriever,
                                  verbose = False)
