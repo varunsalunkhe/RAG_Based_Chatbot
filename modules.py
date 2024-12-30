@@ -4,8 +4,8 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.llms import CTransformers
-from langchain.vectorstores import FAISS
 import faiss
+from langchain.vectorstores import FAISS
 import tempfile
 
 def load_pdf(uploaded_file):
@@ -44,7 +44,7 @@ def save_to_vectordb(docs, embeddings):
     return vector_db
 
 # Function to initialize the HuggingFace model
-def create_huggingface_model(temperature: float = 0.8, context_length: int = 1000, max_new_tokens= 600):
+def create_huggingface_model(temperature: float = 1.0, context_length: int = 1000, max_new_tokens= 600):
 
     try:
         llm = CTransformers(model='TheBloke/Llama-2-7B-Chat-GGML',

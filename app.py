@@ -3,7 +3,7 @@ import streamlit as st
 from langchain.vectorstores import Chroma
 from langchain.prompts import ChatPromptTemplate 
 from langchain import HuggingFaceHub
-from langchain.chains import RetrievalQA
+from langchain.chains import RetrievalQA, RetrievalQAWithSourcesChain, ConversationalRetrievalChain
 from modules import load_pdf, split_text, generate_embeddings, save_to_vectordb,create_huggingface_model
 
 
@@ -47,10 +47,10 @@ if uploaded_file is not None:
     prompt = ChatPromptTemplate.from_template(template)
     
    # Defining a QnA chain
-    QnA = RetrievalQA.from_chain_type(llm = model,
-                                 chain_type = 'stuff',
-                                 retriever = retriever,
-                                 verbose = False)
+    QnA = ConversationalRetrievalChain.from_llm(llm = model,
+                                chain_type = 'stuff',
+                                retriever = retriever,
+                                verbose = False)
     st.success("RAG pipeline created successfully!")
     
     # User Input for Questions
