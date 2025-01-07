@@ -63,9 +63,6 @@ if uploaded_file is not None:
     def get_answers(QnA, query):
         response = QnA.run(query)
         return response
-        # if "Answer:" in response:
-        #     answer = response.split("Answer:", 1)[1].strip()
-        #     return answer
 
     if question:
         with st.spinner("Processing your question..."):
