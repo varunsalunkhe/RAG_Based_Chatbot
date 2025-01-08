@@ -20,7 +20,6 @@ if uploaded_file is not None:
     
     # Step 2: Split the text into chunks
     documents = split_text(pdf_content)
-    # st.write(f"Text split into {len(documents)} chunks.")
     
     # Step 3: Generate embeddings for the documents
     embeddings = generate_embeddings()  # Pass documents to the function
@@ -33,9 +32,6 @@ if uploaded_file is not None:
     # Step 5: Create the HuggingFace model
     # st.write("Attempting to create the HuggingFace model...")
     model = create_huggingface_model()
-    # st.success("Model created successfully!")
-
-    
 
     retriever = vector_db.as_retriever()
     template = """
