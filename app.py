@@ -30,7 +30,6 @@ if uploaded_file is not None:
     # st.success("Documents are vectorized and saved to CromaDB.")
     
     # Step 5: Create the HuggingFace model
-    # st.write("Attempting to create the HuggingFace model...")
     model = create_huggingface_model()
 
     retriever = vector_db.as_retriever()
