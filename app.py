@@ -23,11 +23,9 @@ if uploaded_file is not None:
     
     # Step 3: Generate embeddings for the documents
     embeddings = generate_embeddings()  # Pass documents to the function
-    # st.write("Embeddings generated for the documents.")
 
     # Step 4: Save the vectorized documents to Weaviate
-    vector_db = save_to_vectordb(documents, embeddings)
-    # st.success("Documents are vectorized and saved to CromaDB.")
+    vector_db = save_to_vectordb(documents, embeddings)S
     
     # Step 5: Create the HuggingFace model
     model = create_huggingface_model()
