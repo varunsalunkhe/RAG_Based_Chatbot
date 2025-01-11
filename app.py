@@ -22,7 +22,7 @@ if uploaded_file is not None:
     documents = split_text(pdf_content)
     
     # Step 3: Generate embeddings for the documents
-    embeddings = generate_embeddings()  # Pass documents to the function
+    embeddings = generate_embeddings() 
 
     # Step 4: Save the vectorized documents to Weaviate
     vector_db = save_to_vectordb(documents, embeddings)S
