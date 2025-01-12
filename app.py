@@ -48,8 +48,6 @@ if uploaded_file is not None:
                                 retriever = retriever,
                                 verbose = False)
     
-    # st.success("RAG pipeline created successfully!")
-    
     # User Input for Questions
     question = st.text_input("Ask a question")
 
