@@ -13,7 +13,7 @@ def load_pdf(uploaded_file):
     # Create a temporary file
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_file:
         temp_file.write(uploaded_file.getvalue())  # Write the file content
-        temp_file_path = temp_file.name  # Get the temp file path
+        temp_file_path = temp_file.name  
         
     # Now load the PDF using the temp file path
     loader = PyPDFLoader(temp_file_path, extract_images=True)
