@@ -9,6 +9,7 @@ import chromadb
 from langchain.vectorstores import FAISS, Chroma
 import tempfile
 
+
 def load_pdf(uploaded_file):
     # Create a temporary file
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_file:
