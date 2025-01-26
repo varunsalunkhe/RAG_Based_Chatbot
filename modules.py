@@ -45,6 +45,7 @@ def save_to_vectordb(docs, embeddings):
     )
     return vector_db
 
+
 # Function to initialize the HuggingFace model
 def create_huggingface_model(temperature: float = 0, context_length: int = 4096, max_new_tokens= 2048):
 
