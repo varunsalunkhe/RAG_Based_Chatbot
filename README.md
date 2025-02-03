@@ -8,10 +8,18 @@
 ## Installation :desktop_computer:
 
 ### Requirements :hammer_and_wrench:
-- Python==3.9.13
-- ctransformers==0.2.27
-- langchain==0.1.6
-- streamlit==1.31.0
+chromadb==0.6.1
+ctransformers==0.2.27
+faiss-cpu==1.9.0.post1
+huggingface-hub==0.27.0
+langchain==0.3.13
+langchain-community==0.3.13
+langchain-core==0.3.28
+langchain-text-splitters==0.3.4
+pypdf==5.1.0
+sentence-transformers==3.3.1
+streamlit==1.41.1
+transformers==4.47.1
 
 ## Setup :gear:
 1. Install Python:-
