@@ -2,8 +2,8 @@
 # RAG_Based_Chatbot
 
 ## Introduction 🎯
-• Built a text summarization model using google/pegasus‐cnn-dailymail to generate concise summaries.
-• Implemented a CI/CD pipeline on AWS with GitHub Actions for seamless deployment and maintenance.
+- Built a text summarization model using google/pegasus‐cnn-dailymail to generate concise summaries.
+- Implemented a CI/CD pipeline on AWS with GitHub Actions for seamless deployment and maintenance.
 
 ## Installation :desktop_computer:
 
