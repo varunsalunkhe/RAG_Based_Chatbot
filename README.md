@@ -2,8 +2,7 @@
 # RAG_Based_Chatbot
 
 ## Introduction 🎯
-- Built a text summarization model using google/pegasus‐cnn-dailymail to generate concise summaries.
-- Implemented a CI/CD pipeline on AWS with GitHub Actions for seamless deployment and maintenance.
+Designed a RAG Based Chatbot using Llama-2-7B-Chat-GGML LLM, implementing a RAG‐based system to process files, to analyze content, and generate precise query responses.
 
 ## Installation :desktop_computer:
 
